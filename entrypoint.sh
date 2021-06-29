@@ -4,5 +4,5 @@ aws --version
 
 INTEGRATION_NAME=${GITHUB_REPOSITORY##*/}
 FINAL_NAME=${INTEGRATION_NAME}/${FILE}
-echo uploading $FINAL_NAME to $S3_BUCKET/$ENVIRONMENT/$FINAL_NAME
-aws s3 cp "${FINAL_NAME}" "${S3_BUCKET}/${ENVIRONMENT}/${FINAL_NAME}" --no-progress
+echo uploading symbols/$FILE to $S3_BUCKET/$ENVIRONMENT/$FINAL_NAME
+aws s3 cp "symbols/${FILE}" "${S3_BUCKET}/${ENVIRONMENT}/${FINAL_NAME}" --no-progress
